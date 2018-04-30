@@ -1,0 +1,118 @@
+﻿using System;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Windows;
+
+namespace WpfApp1
+{
+    /// <summary>
+    /// MainWindow.xaml 的交互逻辑
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            string md5Str = Md5Encrypt(inputTextBox.Text);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < md5Str.Length; i += 16)
+            {
+                int length = i >= md5Str.Length ? md5Str.Length - i : 16;
+                string str = "0x" + md5Str.Substring(i, length);
+                ulong hex = Convert.ToUInt64(Convert.ToUInt64(str, 16));
+                if ((bool)capital_cap.IsChecked)
+                {
+                    sb.Append(HexTo36(hex));
+                }
+                else if ((bool)capital_low.IsChecked)
+                {
+                    sb.Append(HexTo36(hex).ToLower());
+                }
+                else
+                {
+                    sb.Append(HexTo62(hex));
+                }
+            }
+            string output = sb.ToString().Substring(0, 16);
+            if ((bool)chkSymbol.IsChecked)
+            {
+                string[] words = { "!", "\"", "#", "$", "%", "&", "'", "(", ")", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~" };
+                
+                Random rand = new Random();
+                int splitIndex = rand.Next(15);
+                output = output.Substring(0, splitIndex) + words[rand.Next(31)] + output.Substring(splitIndex, output.Length - splitIndex - 1);
+            }
+            outputTextBlock.Text = output;
+        }
+        static private string HexTo36(ulong hex)
+        {
+            StringBuilder sb = new StringBuilder();
+            int i = 0;
+            ulong mod = 0;
+            while (hex > 36 || i == 0)
+            {
+                mod = hex % 36;
+                if (mod < 10)
+                    sb.Append(Convert.ToInt64(mod));
+                else
+                    sb.Append(Convert.ToChar(Convert.ToInt64(mod + 55)));
+                i++;
+                hex = hex / 36;
+            }
+            char[] c = sb.ToString().ToArray();
+            Array.Reverse(c);
+            return new string(c);
+        }
+        static private string HexTo62(ulong hex)
+        {
+            StringBuilder sb = new StringBuilder();
+            int i = 0;
+            ulong mod = 0;
+            while (hex > 62 || i == 0)
+            {
+                mod = hex % 62;
+                if (mod < 10)
+                    sb.Append(Convert.ToInt64(mod));
+                else if (mod < 36)
+                    sb.Append(Convert.ToChar(Convert.ToInt64(mod + 55)));
+                else
+                    sb.Append(Convert.ToChar(Convert.ToInt64(mod + 55 + 6)));
+                i++;
+                hex = hex / 62;
+            }
+            char[] c = sb.ToString().ToArray();
+            Array.Reverse(c);
+            return new string(c);
+        }
+        static private string HexTo26(ulong hex)
+        {
+            StringBuilder sb = new StringBuilder();
+            int i = 0;
+            ulong mod = 0;
+            while (hex > 26 || i == 0)
+            {
+                mod = hex % 26;
+                sb.Append(Convert.ToChar(Convert.ToInt64(mod + 55)));
+                i++;
+                hex = hex / 26;
+            }
+            char[] c = sb.ToString().ToArray();
+            Array.Reverse(c);
+            return new string(c);
+        }
+        static private string Md5Encrypt(string inputStr)
+        {
+            Random rand = new Random();
+            byte[] result = Encoding.Default.GetBytes(inputStr + rand.NextDouble());
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] output = md5.ComputeHash(result);
+            return BitConverter.ToString(output).Replace("-", "").ToString();
+        }
+    }
+}
