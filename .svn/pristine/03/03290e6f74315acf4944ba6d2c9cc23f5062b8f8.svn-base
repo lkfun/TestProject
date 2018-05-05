@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phillip", "Phillip\Phillip.csproj", "{6C8AC1EF-4EF8-4C4E-8A1C-C4682F4CDD22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{07639541-3490-4BC2-8B34-FC44D3330265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{AABDB28F-CBCA-4034-8FB8-353F3419E9A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessProject", "AccessProject\AccessProject.csproj", "{66F710CF-957E-4FCC-B479-465469BDC208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAccessTest", "ConsoleAccessTest\ConsoleAccessTest.csproj", "{ABFE5ADB-141D-4970-AD52-F48AA39266AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceTest", "WindowsServiceTest\WindowsServiceTest.csproj", "{497EEA45-0CCF-4442-B80E-9F1CAB4ED786}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonPdfTest", "PythonPdfTest\PythonPdfTest.pyproj", "{9AB096E7-16D8-4CE7-A313-36A067F6C3ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C8AC1EF-4EF8-4C4E-8A1C-C4682F4CDD22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C8AC1EF-4EF8-4C4E-8A1C-C4682F4CDD22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C8AC1EF-4EF8-4C4E-8A1C-C4682F4CDD22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C8AC1EF-4EF8-4C4E-8A1C-C4682F4CDD22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07639541-3490-4BC2-8B34-FC44D3330265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07639541-3490-4BC2-8B34-FC44D3330265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07639541-3490-4BC2-8B34-FC44D3330265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07639541-3490-4BC2-8B34-FC44D3330265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AABDB28F-CBCA-4034-8FB8-353F3419E9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABDB28F-CBCA-4034-8FB8-353F3419E9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABDB28F-CBCA-4034-8FB8-353F3419E9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABDB28F-CBCA-4034-8FB8-353F3419E9A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F710CF-957E-4FCC-B479-465469BDC208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F710CF-957E-4FCC-B479-465469BDC208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F710CF-957E-4FCC-B479-465469BDC208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F710CF-957E-4FCC-B479-465469BDC208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABFE5ADB-141D-4970-AD52-F48AA39266AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABFE5ADB-141D-4970-AD52-F48AA39266AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABFE5ADB-141D-4970-AD52-F48AA39266AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABFE5ADB-141D-4970-AD52-F48AA39266AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{497EEA45-0CCF-4442-B80E-9F1CAB4ED786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{497EEA45-0CCF-4442-B80E-9F1CAB4ED786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{497EEA45-0CCF-4442-B80E-9F1CAB4ED786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{497EEA45-0CCF-4442-B80E-9F1CAB4ED786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB096E7-16D8-4CE7-A313-36A067F6C3ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB096E7-16D8-4CE7-A313-36A067F6C3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {E3AD6B22-DE88-42B6-A622-1CA185E1B6E2}
+	EndGlobalSection
+EndGlobal
