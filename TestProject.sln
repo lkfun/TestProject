@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceTest", "Windo
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonPdfTest", "PythonPdfTest\PythonPdfTest.pyproj", "{9AB096E7-16D8-4CE7-A313-36A067F6C3ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{7B8EBBF2-67F4-4501-88C1-33E7B1710698}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{497EEA45-0CCF-4442-B80E-9F1CAB4ED786}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9AB096E7-16D8-4CE7-A313-36A067F6C3ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9AB096E7-16D8-4CE7-A313-36A067F6C3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8EBBF2-67F4-4501-88C1-33E7B1710698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8EBBF2-67F4-4501-88C1-33E7B1710698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8EBBF2-67F4-4501-88C1-33E7B1710698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8EBBF2-67F4-4501-88C1-33E7B1710698}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
