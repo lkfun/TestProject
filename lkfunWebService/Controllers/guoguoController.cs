@@ -9,31 +9,24 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace lkfunWebService.Controllers
 {
-    //启用跨域
+    [Route("api/[controller]")]
     [Route("[controller]")]
     [EnableCors("any")] //设置跨域处理的 代理
-    public class Md5Controller : Controller
+    public class GuoguoController : Controller
     {
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public double Get(Wci wci)
         {
-            return new string[] { "你好" };
+            return wci.Getwci();
         }
 
         // GET api/<controller>/5
-        [HttpGet("{inText}")]
-        public Md5 Get(string inText)
+        [HttpGet("{str}")]
+        public string Get(string str)
         {
-            return new Md5(inText);
+            return str;
         }
-        // GET api/<controller>/5
-        [HttpGet("{inText}/{type}")]
-        public Md5 Get(string inText,string type)
-        {
-            return new Md5(inText, type);
-        }
-
 
         // POST api/<controller>
         [HttpPost]
