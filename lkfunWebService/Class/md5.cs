@@ -12,16 +12,16 @@ namespace lkfunWebService.Controllers
     {
         private string[] words = { "!", "\"", "#", "$", "%", "&", "'", "(", ")", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~" };
         public string Md5Str { get; set; }
-        public string inText { get; set; }
-        public string type { get; set; }
+        public string InText { get; set; }
+        public string Type { get; set; }
         public Md5(string inText) {
-            this.inText = inText;
+            this.InText = inText;
             this.Md5Str=this.Generatemd5(inText);
         }
         public Md5(string inText, string type)
         {
-            this.inText = inText;
-            this.type = type;
+            this.InText = inText;
+            this.Type = type;
             this.Md5Str = this.Generatemd5(inText);
         }
         private string Generatemd5(string inText)
@@ -34,17 +34,17 @@ namespace lkfunWebService.Controllers
                 int length = i >= md5Str.Length ? md5Str.Length - i : 16;
                 string str = "0x" + md5Str.Substring(i, length);
                 ulong hex = Convert.ToUInt64(Convert.ToUInt64(str, 16));
-                if (type==null || (type != "1"&& type != "2"))
+                if (Type==null || (Type != "1"&& Type != "2"))
                 {
                     //大小写混合
                     sb.Append(HexTo62(hex));
                 }
-                else if (type=="1")
+                else if (Type=="1")
                 {
                     //小写
                     sb.Append(HexTo36(hex).ToLower());
                 }
-                else if (type == "2")
+                else if (Type == "2")
                 {
                     //大写
                     sb.Append(HexTo36(hex));
