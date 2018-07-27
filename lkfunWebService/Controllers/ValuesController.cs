@@ -1,20 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using lkfunWebService.Class;
+using Newtonsoft.Json.Linq;
 
 namespace lkfunWebService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("any")] //设置跨域处理的 代理
     public class ValuesController : ControllerBase
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IList<Board> Get()
         {
-            return new string[] { "value1", "value2" };
+            IList<Board> u=null;
+            try
+            {
+                lk.MysqlHelperLk hp = new lk.MysqlHelperLk();
+                DataTable dt = hp.GetData("select * from pvpa_board");
+                u = lk.DataTableToObject.ConvertTo<Board>(dt);
+            }
+            catch (Exception)
+            {
+
+            }
+            return u;
         }
 
         // GET api/values/5
@@ -26,8 +42,9 @@ namespace lkfunWebService.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public Object Post([FromBody] Object value)
         {
+            return value;
         }
 
         // PUT api/values/5

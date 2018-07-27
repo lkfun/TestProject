@@ -9,7 +9,7 @@ namespace ConsoleAccessTest
     {
         static void Main(string[] args)
         {
-            string mdbFile = @"G:\Projects\Visual St就udio Project\Phillip\AccessProject\mdb\Logger.mdb";           //默認路徑  
+            string mdbFile = @"G:\Projects\Visual Studio Project\Phillip\AccessProject\mdb\Logger.mdb";           //默認路徑  
 
             MDBHelp mdbHelp = new MDBHelp(mdbFile);
             DataTable dt = null;
