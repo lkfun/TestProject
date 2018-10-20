@@ -18,7 +18,7 @@ namespace lkfunWebService.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "你好" };
+            return new string[] { "你坏" };
         }
 
         // GET api/<controller>/5
