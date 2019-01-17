@@ -49,7 +49,7 @@ namespace lkfunWebService.Controllers
         // POST api/values
         [HttpPost]
         [HttpPost, DisableRequestSizeLimit]
-        public async Task<IActionResult> UploadFile()
+        public IActionResult UploadFile()
         {
             try
             {
