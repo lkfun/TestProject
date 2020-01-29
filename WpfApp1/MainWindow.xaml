@@ -34,7 +34,7 @@
                     <TextBlock Height="58" HorizontalAlignment="Left" Margin="127,125,0,0" Name="lblLog" Text="" VerticalAlignment="Top" Width="216" />
                 </Grid>
             </TabItem>
-            <TabItem Header="拖曳测试">
+            <TabItem Header="技能计时器">
                 <Grid AllowDrop="True" Height="193" VerticalAlignment="Top" HorizontalAlignment="Left" Width="353" >
                     <Menu HorizontalAlignment="Left" Height="100" Margin="111,60,0,0" VerticalAlignment="Top" Width="100"/>
                 </Grid>
