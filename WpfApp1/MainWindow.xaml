@@ -18,10 +18,10 @@
                     <RadioButton Name="capital_mix" Content="大小写混合" GroupName="capital" HorizontalAlignment="Left" Margin="135,7,0,0" VerticalAlignment="Top" IsChecked="True" Height="14" Width="79"/>
                     <RadioButton Name="capital_cap" Content="只有大写" GroupName="capital" HorizontalAlignment="Left" Margin="135,26,0,0" VerticalAlignment="Top" Height="14" Width="67"/>
                     <RadioButton Name="capital_low" Content="只有小写" GroupName="capital" HorizontalAlignment="Left" Margin="135,45,0,0" VerticalAlignment="Top" Height="14" Width="67"/>
-                    <CheckBox Name="CheckBox_isRand" Content="随机" HorizontalAlignment="Left" Margin="59,43,0,0" VerticalAlignment="Top" Height="15" Width="44"/>
+                    <CheckBox Name="CheckBox_isRand" Content="随机" HorizontalAlignment="Left" Margin="59,43,0,0" VerticalAlignment="Top" Height="15" Width="44" IsChecked="True"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="安装服务">
+            <TabItem Header="安装服务" Visibility="Hidden">
                 <Grid >
                     <Button Content="安装" Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="btnInstall" VerticalAlignment="Top" Width="75" Click="btnInstall_Click" />
                     <Button Content="卸载" Height="23" HorizontalAlignment="Left" Margin="93,12,0,0" Name="btnUninstall" VerticalAlignment="Top" Width="75" Click="btnUninstall_Click" />
@@ -32,11 +32,6 @@
                     <Button Content="Pause/Continue" Height="23" HorizontalAlignment="Left" Margin="13,69,0,0" Name="btnPauseContinue" VerticalAlignment="Top" Width="109" Click="btnPauseContinue_Click" />
                     <TextBlock Height="23" HorizontalAlignment="Left" Margin="289,41,0,0" Name="lblStatus" Text="" VerticalAlignment="Top" Width="202" />
                     <TextBlock Height="58" HorizontalAlignment="Left" Margin="127,125,0,0" Name="lblLog" Text="" VerticalAlignment="Top" Width="216" />
-                </Grid>
-            </TabItem>
-            <TabItem Header="技能计时器">
-                <Grid AllowDrop="True" Height="193" VerticalAlignment="Top" HorizontalAlignment="Left" Width="353" >
-                    <Menu HorizontalAlignment="Left" Height="100" Margin="111,60,0,0" VerticalAlignment="Top" Width="100"/>
                 </Grid>
             </TabItem>
         </TabControl>
