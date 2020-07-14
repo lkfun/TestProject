@@ -21,6 +21,7 @@
                     <CheckBox Name="CheckBox_isRand" Content="随机" HorizontalAlignment="Left" Margin="59,43,0,0" VerticalAlignment="Top" Height="15" Width="44" IsChecked="True"/>
                 </Grid>
             </TabItem>
+            <TabItem Header="飘窗" x:Name="飘窗"></TabItem>
             <TabItem Header="安装服务" Visibility="Hidden">
                 <Grid >
                     <Button Content="安装" Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="btnInstall" VerticalAlignment="Top" Width="75" Click="btnInstall_Click" />
